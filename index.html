@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/icons/safepass_favicon.svg">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>SafePass</title>
+    </head>
+    <body>
+        <form id="container" action="">
+            <div class="header">
+                <div id="logo_container">
+                    <img id="safepass_logo" src="assets/icons/safepass_logo.svg" alt="SafePass Logo">
+                </div>
+                <div class="text_container">
+                    <p class="main_txt">SafePass is a state-of-the-art password generator at the forefront of modern technology.</p>
+                </div>
+            </div>
+            <div class="generator">
+                <input id="password" type="text" readonly="readonly">
+                <img id="refresh" src="assets/icons/refresh.svg" alt="refresh">
+                <img id="copy" src="assets/icons/copy.svg" alt="copy">
+            </div>
+            <div class="checklist">
+                <div class="check_item">
+                    <input id="letters" type="checkbox" checked>
+                    <p class="white">Letters(Aa)</p>
+                </div>
+                <div class="check_item">
+                    <input id="numbers" type="checkbox">
+                    <p class="white">Numbers(123)</p>
+                </div>
+                <div class="check_item">
+                    <input id="symbols" type="checkbox">
+                    <p class="white">Symbols(&@#)</p>
+                </div>
+            </div>
+            <div class="range">
+                <p class="white">LENGTH<span id="length_value"></span></p>
+                <input class="input_range" id="length" type="range" min="4" max="32" value="16">
+            </div>
+        </form>
+    </body>
+</html>
