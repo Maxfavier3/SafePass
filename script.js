@@ -33,6 +33,7 @@ function generatePassword(){
 
 lengthRange.addEventListener("input", generatePassword);
 
+//Copy element of the input
 function copy(){
     let passwordInput = document.querySelector("#password")
     passwordInput.select();
@@ -44,5 +45,23 @@ function copy(){
 }
 
 copyImg.addEventListener("click", copy);
+
+//Refresh img rotate animation
+function refreshRotate(){
+    refreshImg.animate(
+        [
+          // étapes/keyframes
+          { transform: "rotate(0deg)" },
+          { transform: "rotate(360deg)" },
+        ],
+        {
+          // temporisation
+          duration: 350,
+          iterations: 1,
+        },
+      );
+}
+
+refreshImg.addEventListener("click", refreshRotate);
 
 generatePassword();
