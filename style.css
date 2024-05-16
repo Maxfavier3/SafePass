@@ -111,6 +111,10 @@ body {
     object-fit: cover;
 }
 
+#length_value {
+    margin-left: 0.5rem;
+}
+
 @media (max-width: 800px){
     #container {
         width: 70%;

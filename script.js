@@ -7,6 +7,7 @@ const lettersCheckbox = document.querySelector("#letters");
 const numbersCheckbox = document.querySelector("#numbers");
 const symbolsCheckbox = document.querySelector("#symbols");
 const lengthRange = document.querySelector("#length");
+const length_value = document.querySelector("#length_value")
 
 refreshImg.addEventListener("click", generatePassword);
 
@@ -63,5 +64,11 @@ function refreshRotate(){
 }
 
 refreshImg.addEventListener("click", refreshRotate);
+
+function lengthValue (){
+    length_value.innerHTML = "(" + lengthRange.value + ")";
+}
+
+lengthRange.addEventListener("input", lengthValue);
 
 generatePassword();
