@@ -30,6 +30,8 @@ function generatePassword(){
 
     //Mise a jour du mot de passe généré
     passwordInput.value = password;
+
+    copyImg.src = "assets/icons/copy.svg";
 }
 
 lengthRange.addEventListener("input", generatePassword);
