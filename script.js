@@ -41,7 +41,7 @@ function copy(){
     
     navigator.clipboard.writeText(passwordInput.value);
 
-    alert("Text copied !")
+    copyImg.src = "assets/icons/success.svg";
 }
 
 copyImg.addEventListener("click", copy);
