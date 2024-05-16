@@ -115,6 +115,14 @@ body {
     margin-left: 0.5rem;
 }
 
+input[type= "checkbox"]:checked{
+    accent-color: #000000;
+}
+
+input[type= "range"]{
+    accent-color: #000000;
+}
+
 @media (max-width: 800px){
     #container {
         width: 70%;
