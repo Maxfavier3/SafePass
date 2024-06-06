@@ -17,7 +17,7 @@ function generatePassword(){
     const hasNumbers = numbersCheckbox.checked;
     const hasSymbols = symbolsCheckbox.checked;
 
-    //Créer un tableau de caractère possibles selon les options selectionne
+    //Create a table of possible caracter with selected option
     const possibleChars = (hasLetters ? "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" : "")
                             + (hasNumbers ? "0123456789" : "")
                             + (hasSymbols ? "!@#$%^&*()" : "");
@@ -59,8 +59,9 @@ function refreshRotate(){
         ],
         {
           // temporisation
-          duration: 350,
+          duration: 500,
           iterations: 1,
+          easing: "ease-in-out"
         },
       );
 }
