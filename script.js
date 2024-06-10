@@ -22,13 +22,13 @@ function generatePassword(){
                             + (hasNumbers ? "0123456789" : "")
                             + (hasSymbols ? "!@#$%^&*()" : "");
 
-    // Générez le mot de passe en sélectionnant des caractères aléatoires
+    //Generate a password with random caracter
     let password = "";
     for(let i = 0; i < length; i++){
         password += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
     }
 
-    //Mise a jour du mot de passe généré
+    //Update generate password
     passwordInput.value = password;
 
     copyImg.src = "assets/icons/copy.svg";
@@ -45,6 +45,11 @@ function copy(){
     navigator.clipboard.writeText(passwordInput.value);
 
     copyImg.src = "assets/icons/success.svg";
+
+    // Revert the icon back to copy after 500ms
+    setTimeout(() => {
+      copyImg.src = "assets/icons/copy.svg";
+    }, 1000);
 }
 
 copyImg.addEventListener("click", copy);
